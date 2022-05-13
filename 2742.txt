@@ -1,0 +1,6 @@
+select l.name, round((l.omega*1618),3) "The N Factor"
+from life_registry l
+join dimensions d
+on l.dimensions_id = d.id
+where l.name like 'Richard%' and d.name in ('C875', 'C774')
+order by l.omega asc;
